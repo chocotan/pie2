@@ -1,0 +1,25 @@
+{
+  "defaultProvider": "custom",
+  "defaultModel": "your-model",
+  "webSearch": {
+    "timeoutMs": 15000
+  },
+  "providers": {
+    "custom": {
+      "name": "My API",
+      "baseUrl": "https://api.example.com/v1",
+      "api": "openai-completions",
+      "apiKey": "your-api-key",
+      "models": [
+        {
+          "id": "your-model",
+          "name": "My Model",
+          "reasoning": false,
+          "input": ["text"],
+          "contextWindow": 128000,
+          "maxTokens": 8192
+        }
+      ]
+    }
+  }
+}

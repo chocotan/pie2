@@ -1,0 +1,40 @@
+{
+  "name": "pie2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "pie2": "./bin/pie2.mjs"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types src/cli.ts",
+    "build": "node bin/build.mjs",
+    "prepack": "npm run build",
+    "install:global": "node bin/pie2.mjs install",
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts"
+  },
+  "files": [
+    "bin/pie2.mjs",
+    "dist/",
+    "examples/config/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "2.8.0",
+    "@earendil-works/chord": "1.4.0",
+    "@earendil-works/pi-ai": "1.4.0",
+    "@earendil-works/pi-codemode": "1.4.0",
+    "@earendil-works/pi-durable": "1.4.0",
+    "@earendil-works/pi-tui": "^1.4.0",
+    "typebox": "1.3.27",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}
